@@ -1,0 +1,8 @@
+TÀI LIỆU ĐỐI CHIẾU
+Nguồn gốc: SteamBusiness.Report.rar và SteamBusiness.SemanticModel.rar do người dùng cung cấp.
+Đã đọc definition/pages/*.json cùng các visual.json; definition/tables/SteamGames.tmdl.
+Báo cáo gốc có 6 trang hiện, trang chi tiết quốc gia ẩn, và trang hỗ trợ rê chuột.
+Nguồn CSV Power Query: https://raw.githubusercontent.com/jsngn/steam-machine-learning/master/steam.csv
+Nguồn dữ liệu được mô tả là Kaggle nikdavis/steam-store-games, ảnh chụp lịch sử khoảng tháng 5/2019.
+Dữ liệu địa lý do dự án ánh xạ bảo thủ, chưa xác nhận độc lập trụ sở từng nhà phát hành.
+Không đưa các file dự án hoặc dữ liệu nhị phân .abf lên web.

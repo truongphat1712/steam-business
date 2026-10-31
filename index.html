@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#eff6ff">
+  <meta name="description" content="Bảng điều khiển tương tác phân tích danh mục Steam - dữ liệu lịch sử 2019">
+  <title>SteamBusiness · Dashboard phân tích kinh doanh</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">S<span class="brand-dot">•</span></span><span><b>SteamBusiness</b><small>Market intelligence</small></span></div>
+      <div class="sidebar-label">BẢNG PHÂN TÍCH</div>
+      <nav id="nav" aria-label="Các trang báo cáo">
+        <button data-page="overview" class="nav-link active"><span class="nav-num">01</span> Tổng quan kinh doanh</button>
+        <button data-page="commercial" class="nav-link"><span class="nav-num">02</span> Giá & thương mại</button>
+        <button data-page="engagement" class="nav-link"><span class="nav-num">03</span> Thị trường & tương tác</button>
+        <button data-page="taxonomy" class="nav-link"><span class="nav-num">04</span> Phân cấp danh mục</button>
+        <button data-page="geography" class="nav-link"><span class="nav-num">05</span> Bản đồ nhà phát hành</button>
+        <button data-page="insights" class="nav-link"><span class="nav-num">06</span> Kết quả phân tích</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="source-pill"><span class="pulse"></span><span id="source-status">Đang kiểm tra dữ liệu...</span></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">NGHIÊN CỨU THỊ TRƯỜNG <span> / </span> <span id="breadcrumb">TỔNG QUAN</span></div></header>
+      <div class="page-content">
+        <div class="intro"><div class="eyebrow">STEAM MARKET ANALYTICS <span class="eyebrow-line"></span> KHÁM PHÁ DỮ LIỆU</div><h1 id="page-title">Tổng quan kinh doanh<span class="title-dot">.</span></h1><p id="page-desc">Khám phá quy mô, cấu trúc danh mục và sức hút của các trò chơi trên Steam.</p></div>
+        <section class="filters" aria-label="Bộ lọc toàn báo cáo">
+          <div class="filter-heading"><span>⌕</span> BỘ LỌC PHÂN TÍCH <button id="reset" class="reset" type="button">↺ Đặt lại</button></div>
+          <div class="filter-grid"><label>Năm từ<select id="year-from"></select></label><label>Năm đến<select id="year-to"></select></label><label>Thể loại<select id="genre"><option value="">Tất cả thể loại</option></select></label><label>Nhóm giá<select id="price"><option value="">Tất cả mức giá</option></select></label><label>Quốc gia nhà phát hành<select id="country"><option value="">Tất cả quốc gia</option></select></label><label>Tìm trò chơi<input id="search" type="search" placeholder="Tên trò chơi..."></label></div>
+          <div class="filter-foot"><span id="filter-summary">Đang tải dữ liệu...</span><span class="filter-help">Nhấp biểu đồ để lọc; nhấp lại để bỏ lọc</span></div>
+        </section>
+        <section id="data-warning" class="data-warning" hidden><div class="warn-icon">!</div><div><strong>Chưa tải được dữ liệu Steam</strong><p id="error-message">Không thể tải dữ liệu Steam. Vui lòng tải lại trang để thử lại.</p></div></section>
+        <section class="metric-grid" id="metric-grid" aria-label="Các chỉ số tổng hợp"></section>
+        <section id="page-body" class="dashboard-body" aria-live="polite"></section>
+        <footer><span>STEAMBUSINESS · ĐỒ ÁN PHÂN TÍCH DỮ LIỆU</span><span>Ảnh chụp dữ liệu lịch sử, không phải doanh thu thực tế</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
